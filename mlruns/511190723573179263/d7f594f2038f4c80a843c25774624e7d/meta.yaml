@@ -1,0 +1,14 @@
+artifact_uri: file:///app/mlruns/511190723573179263/d7f594f2038f4c80a843c25774624e7d/artifacts
+end_time: 1753313060374
+entry_point_name: ''
+experiment_id: '511190723573179263'
+lifecycle_stage: active
+run_id: d7f594f2038f4c80a843c25774624e7d
+run_name: Best_Model
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753313052214
+status: 3
+tags: []
+user_id: root

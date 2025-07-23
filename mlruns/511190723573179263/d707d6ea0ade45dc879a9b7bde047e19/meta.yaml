@@ -1,0 +1,14 @@
+artifact_uri: file:///app/mlruns/511190723573179263/d707d6ea0ade45dc879a9b7bde047e19/artifacts
+end_time: 1753312224109
+entry_point_name: ''
+experiment_id: '511190723573179263'
+lifecycle_stage: active
+run_id: d707d6ea0ade45dc879a9b7bde047e19
+run_name: KNeighbors
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753312218266
+status: 3
+tags: []
+user_id: root

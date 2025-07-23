@@ -1,0 +1,37 @@
+version: "3.8"
+
+services:
+  fetal_health:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./data:/data
+      - ./models:/app/models
+      - ./src:/app/src
+      - ./mlruns:/app/mlruns
+    working_dir: /app/src
+    command: python serve.py
+    ports:
+      - "5000:5000"
+    container_name: fetal_health_model
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    volumes:
+      - ./frontend:/app
+    ports:
+      - "8501:8501"
+    depends_on:
+      - fetal_health
+
+  mlflow_ui:
+    image: ghcr.io/mlflow/mlflow
+    ports:
+      - "5001:5000"
+    volumes:
+      - ./mlruns:/mlruns
+      - ./data:/data
+    command: mlflow ui --backend-store-uri /mlruns --host 0.0.0.0 --port 5000

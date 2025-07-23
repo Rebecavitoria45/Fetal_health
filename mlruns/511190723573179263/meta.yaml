@@ -1,0 +1,6 @@
+artifact_location: file:///app/mlruns/511190723573179263
+creation_time: 1753312218130
+experiment_id: '511190723573179263'
+last_update_time: 1753312218130
+lifecycle_stage: active
+name: fetal_health_exp
