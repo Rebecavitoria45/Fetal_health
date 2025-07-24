@@ -4,11 +4,10 @@ Este projeto tem como objetivo treinar, rastrear e servir modelos de machine lea
 
 ## 📁 Estrutura do Projeto
 
-.
 ├── data/                  # Base de dados fetal_health.csv <br>
 ├── mlruns/               # Logs do MLflow <br>
 ├── models/               # Modelo final treinado <br>
-├── src/ <br>                
+├── src/                
 │   ├── train.py          # Treinamento com GridSearchCV e MLflow <br>
 │   ├── serve.py          # API Flask para servir modelo <br>
 ├── frontend/             # Aplicação Frontend <br>
@@ -31,22 +30,21 @@ O dataset é baseado em sinais obtidos por cardiotocografia (CTG), contendo 21 v
 - *2.0* - Suspeito
 - *3.0* - Patológico
 
-> Fonte: [UCI Machine Learning Repository - Fetal Health](https://archive.ics.uci.edu/ml/datasets/Fetal+Health+Classification)
 
 ## ⚙️ Como executar o projeto
 
 ### 1. Clone o repositório
 
-bash
+```bash
 git clone https://github.com/seu-usuario/fetal-health-mlflow.git
 cd fetal-health-mlflow
-
+```
 
 ### 2. Execute com Docker Compose
 
-bash
+```bash
 docker-compose up --build
-
+```
 
 Isso irá iniciar:
 
@@ -61,9 +59,9 @@ Isso irá iniciar:
 - Hiperparâmetros ajustados via GridSearchCV.
 - Métrica de avaliação: *Acurracy*.
 
-bash
+```bash
 docker exec -it fetal_health_model python src/train.py
-
+```
 
 O melhor modelo é salvo em models/best_model.pkl e logado no MLflow.
 
@@ -93,9 +91,9 @@ Visualize e compare todos os experimentos de treinamento acessando:
 
 Para parar e remover os containers:
 
-bash
+```bash
 docker-compose down
-
+```
 
 ---
 
@@ -106,17 +104,17 @@ Caso deseje rodar sem Docker:
 - Python 3.10+
 - Instale dependências:
 
-bash
+```bash
 pip install -r requirements.txt
-
+```
 
 - Execute localmente:
 
-bash
+```bash
 python src/train.py
 python src/serve.py
 streamlit run frontend/app.py
-
+```
 
 ---
 
