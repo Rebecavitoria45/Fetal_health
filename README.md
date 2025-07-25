@@ -59,10 +59,6 @@ Isso irá iniciar:
 - Hiperparâmetros ajustados via GridSearchCV.
 - Métrica de avaliação: *Acurracy*.
 
-```bash
-docker exec -it fetal_health_model python src/train.py
-```
-
 O melhor modelo é salvo em models/best_model.pkl e logado no MLflow.
 
 ---
